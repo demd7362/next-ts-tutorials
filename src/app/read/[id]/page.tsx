@@ -1,5 +1,7 @@
-export default function Read({ params }: LayoutProps) {
+export default async function Read({ params }: LayoutProps) {
+    const response = await fetch(`http://localhost:9999/topics/${params.id}`);
+    const { title } = await response.json();
     return (
-        <>param : {params.id}</>
+        <>page param : {title}</>
     )
 }

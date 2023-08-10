@@ -11,7 +11,12 @@ export const metadata: Metadata = {
 const element: string[] = ["html", "css", "javascript"];
 
 export default async function RootLayout({ children }: LayoutProps) {
-  const response = await fetch('http://localhost:9999/topics');
+  const response = await fetch('http://localhost:9999/topics',{
+    // next: {
+    //   revalidate: 10
+    // }
+    cache: 'no-store',
+  });
   const topics = await response.json();
   return (
     <html>
