@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import './globals.css';
+import Menu from './Menu';
 
 export const metadata: Metadata = {
   title: 'Web tutorials',
@@ -8,10 +9,8 @@ export const metadata: Metadata = {
 }
 
 
-const element: string[] = ["html", "css", "javascript"];
-
-export default async function RootLayout({ children }: LayoutProps) {
-  const response = await fetch('http://localhost:9999/topics',{
+export default async function RootLayout({ children, params }: LayoutProps) {
+  const response = await fetch(`${process.env.API_URL}/topics`, {
     // next: {
     //   revalidate: 10
     // }
@@ -34,18 +33,7 @@ export default async function RootLayout({ children }: LayoutProps) {
           })}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href="/create">Create</Link>
-          </li>
-          <li>
-            <Link href="/update/1">Update</Link>
-          </li>
-          <li>
-            <input type="button" value="Delete" />
-          </li>
-        </ul>
-
+        <Menu />
       </body>
     </html>
   )

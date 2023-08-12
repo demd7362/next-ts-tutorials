@@ -6,39 +6,14 @@
       "body": "html is..."
     },
     {
-      "id": 2,
-      "title": "css",
-      "body": "css is..."
-    },
-    {
-      "id": 3,
-      "title": "javscript",
-      "body": "javascript is..."
-    },
-    {
       "id": 4,
       "title": "typecript",
       "body": "typescript is..."
     },
     {
-      "title": "java",
       "body": "java is...",
+      "title": "java",
       "id": 5
-    },
-    {
-      "title": "umm",
-      "body": "umm is...",
-      "id": 6
-    },
-    {
-      "title": "wow",
-      "body": "wow is",
-      "id": 7
-    },
-    {
-      "title": "ㅎㅎ",
-      "body": "ㅎㅎ",
-      "id": 8
     }
   ],
   "posts": [

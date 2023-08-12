@@ -2,9 +2,14 @@ interface Params {
     [key: string]: string | string[]
 }
 interface Topic {
-    id: number,
+    id?: number,
+    title?: string,
+    body?: string,
+}
+
+interface TopicFormEvent extends EventTarget {
     title: string,
-    body: string,
+    body: string
 }
 
 type LayoutProps = {
